@@ -355,41 +355,75 @@
           </ul>
         </div>
       </section>
+      <!-- Заказать услугу -->
       <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button data-modal-close>Закрыть</button>
+          <button class="modal-button" data-modal-close>
+            <svg class="modal-icon">
+              <use href="./imeges/sprite.svg#x"></use>
+            </svg>
+          </button>
+
           <b class="form-title">
             Оставьте свои данные, мы вам перезвоним
           </b>
-          <form class="form js-speaker-form">
-            <div class="form-field">
-              <label for="name">Имя</label>
-              <input type="text" name="name" id="name" />
-            </div>
-            <div class="form-field">
-              <label for="tel">Телефон</label>
-              <input type="tel" name="tel" id="tel" />
-            </div>
-            <div class="form-field">
-              <label for="mail">Почта</label>
-              <input type="email" name="mail" id="mail" />
-            </div>
-            <div class="form-field">
-              <label for="comment">Комментарий</label>
+
+          <form class="form js-speaker-form" autocomplete="off">
+            <label class="form-field">
+              <input
+                type="text"
+                class="form-input"
+                name="name"
+                placeholder=" "
+              />
+              <span class="form-label">Имя</span>
+              <span>
+                <svg class="form-icon">
+                  <use href="./imeges/sprite.svg#name"></use>
+                </svg>
+              </span>
+            </label>
+
+            <label class="form-field">
+              <input type="tel" class="form-input" name="tel" placeholder=" " />
+              <span class="form-label">Телефон</span>
+              <span
+                ><svg class="form-icon">
+                  <use href="./imeges/sprite.svg#tel"></use></svg
+              ></span>
+            </label>
+
+            <label class="form-field">
+              <input
+                type="email"
+                class="form-input"
+                name="mail"
+                placeholder=" "
+              />
+              <span class="form-label">Почта</span>
+              <span>
+                <svg class="form-icon">
+                  <use href="./imeges/sprite.svg#mail"></use>
+                </svg>
+              </span>
+            </label>
+
+            <label class="form-field">
               <textarea
+                class="form-textarea"
                 name="comment"
-                id="comment"
-                rows="8"
-                autocomplete="off"
+                placeholder=" "
               ></textarea>
-            </div>
-            <div class="form-field">
-              <input type="checkbox" name="policy" id="policy" />
-              <label for="policy"
+              <span class="textarea-name">Комментарий</span>
+            </label>
+            <label class="form-agreement">
+              <input type="checkbox" name="agreement" class="agreement-check" />
+              <span class="custom-check"></span>
+              <span class="conditions"
                 >Соглашаюсь с рассылкой и принимаю
-                <a href="">Условия договора</a>
-              </label>
-            </div>
+                <a href="" class="conditions-colour">Условия договора</a>
+              </span>
+            </label>
             <button class="form-button" type="submit">Отправить</button>
           </form>
         </div>
@@ -445,10 +479,34 @@
             </li>
           </ul>
         </div>
+
+        <!-- footer E-mail -->
+        <div class="footer-link">
+          <b class="footer-text">Подпишитесь на рассылку</b>
+          <form class="form-mail js-speaker-form">
+            <div class="mail-field">
+              <input
+                class="mail-input"
+                type="email"
+                name="mail"
+                id="mail"
+                placeholder="E-mail"
+                autocomplete="off"
+              />
+            </div>
+            <button class="button-mail" type="submit">
+              Подписаться
+              <svg class="button-img" width="24" height="24">
+                <use href="./imeges/sprite.svg#airplane"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
-      <p class="footer-date container">
+
+      <!-- <p class="footer-date container">
         2020 &#10072; Developed by GoIT Students
-      </p>
+      </p> -->
     </footer>
 
     <script>
